@@ -21,14 +21,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.i("APP","onCreate")
+        Log.i("APP", "onCreate")
         button = findViewById<Button>(R.id.button)
         text = findViewById<TextView>(R.id.text)
 
-        this.button?.setText("XYZ")
+        this.button?.text = "XYZ"
         this.button?.setOnClickListener(this)
 
         findViewById<Button>(R.id.button2).setOnClickListener(this)
+        findViewById<Button>(R.id.button3).setOnClickListener(this)
     }
 
     override fun onResume() {
@@ -36,37 +37,43 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         localCounter = 0
     }
 
-    fun createAlert(){
-       val dialogBuilder = AlertDialog.Builder(this)
+    fun createAlert() {
+        val dialogBuilder = AlertDialog.Builder(this)
         dialogBuilder.setTitle("Pytanie")
         dialogBuilder.setMessage("Czy dalej chcesz liczyc klikniecia?")
-        dialogBuilder.setPositiveButton("Tak", DialogInterface.OnClickListener { dialogInterface, i ->
-            Log.i("APP","Click positive")
+        dialogBuilder.setPositiveButton("Tak", { dialog, which ->
+            Log.i("APP", "Click positive")
         })
-        dialogBuilder.setNegativeButton("Nie",{dialog,which->
-            Log.i("APP","Click negative")
+        dialogBuilder.setNegativeButton("Nie", { dialog, which ->
+            Log.i("APP", "Click negative")
+            localCounter = 0
 
         })
         dialogBuilder.show()
     }
-    override fun onClick(button: View?) {
-        if(button?.id == R.id.button2){
-            text?.text = "Global Counter is ${GLOBAL_COUNTER++}\n local counter is${localCounter++}"
-            createAlert()
-            Toast.makeText(this,"Button 2 Clicked", android.widget.Toast.LENGTH_LONG).show()
-        }else{
 
-            val intent = Intent(this,SecondaryActivity::class.java)
-            intent.putExtra("HELLO_VARIABLE","Hello from MainActivity")
+    override fun onClick(button: View?) {
+        if (button?.id == R.id.button3) {
+            text?.text = "Global Counter is ${GLOBAL_COUNTER++}\n local counter is ${localCounter++}"
+            if(localCounter>=10) {
+                createAlert()
+            }
+            Toast.makeText(this, "Button 3 Clicked", android.widget.Toast.LENGTH_LONG).show()
+        }else if (button?.id == R.id.button2) {
+            Toast.makeText(this, "Button 2 Clicked", android.widget.Toast.LENGTH_LONG).show()
+        } else {
+
+            val intent = Intent(this, SecondaryActivity::class.java)
+            intent.putExtra("HELLO_VARIABLE", "Hello from MainActivity")
             startActivity(intent)
 
             Toast.makeText(this, "Other button click", Toast.LENGTH_SHORT).show()
         }
         when (button?.id) {
-            R.id.button -> Log.i("Btn","Button")
-            R.id.button2 -> Log.i("Btn","Button1")
-            else -> Log.e("ERR","ups")
+            R.id.button -> Log.i("Btn", "Button")
+            R.id.button2 -> Log.i("Btn", "Button1")
+            else -> Log.e("ERR", "ups")
         }
-        Log.i("APP","Clicked via listener")
+        Log.i("APP", "Clicked via listener")
     }
 }
