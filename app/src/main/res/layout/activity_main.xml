@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".day1.MainActivity">
 
     <TextView
         android:layout_width="@dimen/_120sdp"
@@ -44,5 +44,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:backgroundTint="@color/design_default_color_secondary_variant"
         android:text="Button 3 Alert" />
+   <Button
+        android:id="@+id/button_day2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/button3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/purple_700"
+        android:text="Day 2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

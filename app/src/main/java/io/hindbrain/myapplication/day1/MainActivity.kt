@@ -1,6 +1,5 @@
-package io.hindbrain.myapplication
+package io.hindbrain.myapplication.day1
 
-import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +10,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import io.hindbrain.myapplication.MyApplication.Companion.GLOBAL_COUNTER
+import io.hindbrain.myapplication.R
+import io.hindbrain.myapplication.day2.FirstActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -30,6 +31,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         findViewById<Button>(R.id.button2).setOnClickListener(this)
         findViewById<Button>(R.id.button3).setOnClickListener(this)
+        findViewById<Button>(R.id.button_day2).setOnClickListener{
+            val intent = Intent(this, FirstActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onResume() {

@@ -10,14 +10,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".MainActivity">
+        <activity android:name=".day1.MainActivity"/>
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+
+        <activity android:name=".day1.SecondaryActivity"/>
+        <activity android:name=".day2.FirstActivity"/>
+        <activity android:name=".day2.SecondActivity"/>
+        <activity android:name=".day2.CustomFragmentActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".SecondaryActivity"/>
     </application>
 
 </manifest>

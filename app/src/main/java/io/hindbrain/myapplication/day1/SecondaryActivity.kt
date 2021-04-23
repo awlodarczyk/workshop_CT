@@ -1,8 +1,9 @@
-package io.hindbrain.myapplication
+package io.hindbrain.myapplication.day1
 
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import io.hindbrain.myapplication.R
 
 class SecondaryActivity: AppCompatActivity() {
 
