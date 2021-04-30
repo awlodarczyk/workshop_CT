@@ -45,8 +45,8 @@ class FirstFragment: Fragment() {
         textview_date = view.findViewById<TextView>(R.id.date)
         edittext_number = view.findViewById<EditText>(R.id.number)
         button_date = view.findViewById<Button>(R.id.set_date)
-        textview_date.text = "--/--/----"
-
+//        textview_date.text = "--/--/----"
+        updateDateInView()
         setFragmentResultListener(RESULT_KEY){ requestKey, bundle ->
             bundle.get("_return_key_")?.let {
                 if(it is String) {
@@ -85,6 +85,9 @@ class FirstFragment: Fragment() {
             args.putString("date",textview_date.text.toString())
             args.putString("number",edittext_number.text.toString())
             findNavController().navigate(R.id.action_firstFragment_to_secondFragment,args)
+        }
+        view.findViewById<Button>(R.id.button_third).setOnClickListener {
+            findNavController().navigate(R.id.action_firstFragment_to_thirdFragment)
         }
     }
     private fun updateDateInView() {

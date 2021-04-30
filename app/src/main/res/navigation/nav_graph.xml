@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_firstFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
         android:name="io.hindbrain.myapplication.day2.fragment.SecondFragment"
         android:label="SecondFragment"
         tools:layout="@layout/fragment_second"/>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="io.hindbrain.myapplication.day3.ThirdFragment"
+        android:label="ThirdFragment"
+        tools:layout="@layout/fragment_third" />
 </navigation>

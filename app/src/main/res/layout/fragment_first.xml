@@ -52,4 +52,11 @@
         app:layout_constraintTop_toBottomOf="@id/number"
         android:text="Przejdź do drugiego fragmentu"
         android:id="@+id/button"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        android:text="Przejdź do trzeciego fragmentu"
+        android:id="@+id/button_third"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
