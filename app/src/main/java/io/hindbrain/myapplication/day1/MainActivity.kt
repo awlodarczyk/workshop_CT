@@ -13,6 +13,7 @@ import io.hindbrain.myapplication.MyApplication.Companion.GLOBAL_COUNTER
 import io.hindbrain.myapplication.R
 import io.hindbrain.myapplication.day2.FirstActivity
 import io.hindbrain.myapplication.day4.SharedPrefsActivity
+import io.hindbrain.myapplication.day4.WordActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -37,7 +38,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             startActivity(intent)
         }
         findViewById<Button>(R.id.button_day4).setOnClickListener{
-            val intent = Intent(this, SharedPrefsActivity::class.java)
+//            val intent = Intent(this, SharedPrefsActivity::class.java)
+//            startActivity(intent)
+
+            val intent = Intent(this, WordActivity::class.java)
             startActivity(intent)
         }
     }

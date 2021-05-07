@@ -27,6 +27,8 @@
 <!--            </intent-filter>-->
         </activity>
         <activity android:name=".day4.SharedPrefsActivity"/>
+        <activity android:name=".day4.WordActivity"/>
+        <activity android:name=".day4.NewWordActivity"/>
     </application>
 
 </manifest>

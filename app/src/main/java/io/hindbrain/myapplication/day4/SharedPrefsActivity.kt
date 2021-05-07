@@ -86,3 +86,14 @@ class SharedPrefsActivity:AppCompatActivity() {
         textView.text = txt
     }
 }
+
+//<SHARED_PREFS>
+//    <KEY>xxx</KEY>
+//    <KEY1>xxx</KEY1>
+//    <KEY2>xxx</KEY2>
+//</SHARED_PREFS>
+//<SHARED_PREFS2>
+//    <KEY>xxx</KEY>
+//    <KEY1>xxx</KEY1>
+//    <KEY2>xxx</KEY2>
+//</SHARED_PREFS2>
