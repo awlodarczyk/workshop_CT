@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import io.hindbrain.myapplication.R
 import io.hindbrain.myapplication.day3.adapter.ShoppingAdapter
-import io.hindbrain.myapplication.day3.adapter.SimpleAdapter
 import io.hindbrain.myapplication.day3.model.Priority
 import io.hindbrain.myapplication.day3.model.ShoppingItem
 

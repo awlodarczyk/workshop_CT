@@ -2,6 +2,7 @@ package io.hindbrain.myapplication.day2
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
 import io.hindbrain.myapplication.R
 
 class CustomFragmentActivity : AppCompatActivity() {
