@@ -14,6 +14,7 @@ import io.hindbrain.myapplication.R
 import io.hindbrain.myapplication.day2.FirstActivity
 import io.hindbrain.myapplication.day4.SharedPrefsActivity
 import io.hindbrain.myapplication.day4.WordActivity
+import io.hindbrain.myapplication.day5.activity.UsersActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -42,6 +43,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 //            startActivity(intent)
 
             val intent = Intent(this, WordActivity::class.java)
+            startActivity(intent)
+        }
+        findViewById<Button>(R.id.button_day5).setOnClickListener{
+//            val intent = Intent(this, SharedPrefsActivity::class.java)
+//            startActivity(intent)
+
+            val intent = Intent(this, UsersActivity::class.java)
             startActivity(intent)
         }
     }

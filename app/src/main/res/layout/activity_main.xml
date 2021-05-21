@@ -62,5 +62,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:backgroundTint="@color/purple_700"
         android:text="Day 4" />
+    <Button
+        android:id="@+id/button_day5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/button_day4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/purple_700"
+        android:text="Day 5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

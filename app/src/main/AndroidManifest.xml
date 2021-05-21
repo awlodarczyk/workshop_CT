@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.hindbrain.myapplication">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -29,6 +31,7 @@
         <activity android:name=".day4.SharedPrefsActivity"/>
         <activity android:name=".day4.WordActivity"/>
         <activity android:name=".day4.NewWordActivity"/>
+        <activity android:name=".day5.activity.UsersActivity"/>
     </application>
 
 </manifest>
