@@ -11,10 +11,10 @@ import java.util.*
 //"address": "88055 Hyman Forges"
 //},
 data class User(
-    val id:Int,
+    val id:Int? = null,
     @SerializedName("createdAt")
-    val created:Date,
+    val created:Date? = null,
     val name:String,
-    val avatar:String,
+    val avatar:String? = null,
     val address:String
 )

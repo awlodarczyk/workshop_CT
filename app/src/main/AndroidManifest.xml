@@ -32,6 +32,7 @@
         <activity android:name=".day4.WordActivity"/>
         <activity android:name=".day4.NewWordActivity"/>
         <activity android:name=".day5.activity.UsersActivity"/>
+        <activity android:name=".day5.activity.AddUserActivity"/>
     </application>
 
 </manifest>

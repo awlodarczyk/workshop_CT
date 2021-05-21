@@ -1,7 +1,10 @@
 package io.hindbrain.myapplication.day5.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,7 +23,10 @@ class UsersActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_users)
-
+        findViewById<Button>(R.id.add).setOnClickListener {
+            val intent = Intent(this, AddUserActivity::class.java)
+            startActivity(intent)
+        }
         val recyclerView = findViewById<RecyclerView>(R.id.recycler)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
